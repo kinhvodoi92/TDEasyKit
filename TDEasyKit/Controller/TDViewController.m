@@ -56,7 +56,7 @@
     /**
      Send Event to controller: back,....
      */
-    @property (nonatomic) id<TDNavigationBarDelegate> delegate;
+    @property (nonatomic, weak) id<TDNavigationBarDelegate> delegate;
 
     /**
      Default is NO. If YES, the @backButton will be hidden.
@@ -72,6 +72,17 @@
     @end
 
 @implementation TDNavigationBar
+
+- (void)dealloc
+{
+    _delegate = nil;
+    leftContainer = nil;
+    centerView = nil;
+    centerContainer = nil;
+    rightContainer = nil;
+    bottomLine = nil;
+    backButton = nil;
+}
 
 -(id)initWithFrame:(CGRect)frame
     {
@@ -186,7 +197,7 @@
         TDConfiguration *config = [TDConfiguration defaultConfiguration];
         CGFloat navigationBarHeight = config.navigationBarHeight;
         CGFloat width = 0;
-
+        
         for (UIView *view in views) {
             view.frame = CGRectMake(width, 0, navigationBarHeight, navigationBarHeight);
 
@@ -252,8 +263,8 @@
 @implementation TDNavigationBar (Actions)
 
 -(void)back:(UIButton*)sender {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(pressedBack:)]) {
-        [self.delegate pressedBack:self];
+    if (_delegate && [_delegate respondsToSelector:@selector(pressedBack:)]) {
+        [_delegate pressedBack:self];
     }
 }
 
@@ -414,6 +425,13 @@
     
 -(void)dealloc
     {
+        _navigationBar = nil;
+        _statusBar = nil;
+        _leftViews = nil;
+        _titleViews = nil;
+        _rightViews = nil;
+        titleLabel = nil;
+        self.navigationController.interactivePopGestureRecognizer.delegate = nil;
         [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
         [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
     }
@@ -446,11 +464,10 @@
         UINavigationController *navi = self.navigationController;
         
         if (navi) {
-            if ([navi.topViewController isEqual:self] && [navigationBar isEqual:self.navigationBar]) {
+            if ([navi.topViewController isEqual:self] && [navigationBar isEqual:_navigationBar]) {
                 [navi popViewControllerAnimated:YES];
             }
         }
-        
         navi = nil;
     }
     
