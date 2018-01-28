@@ -36,6 +36,6 @@ FOUNDATION_EXPORT const unsigned char TDEasyKitVersionString[];
 
  @param config TDConfiguration to config
  */
-+(void)configure:(TDConfiguration*(^)())config;
++(void)configure:(TDConfiguration*(^)(void))config;
 
 @end

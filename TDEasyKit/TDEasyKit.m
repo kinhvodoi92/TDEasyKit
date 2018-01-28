@@ -10,7 +10,7 @@
 
 @implementation TDEasyKit
 
-+(void)configure:(TDConfiguration*(^)())configBlock
++(void)configure:(TDConfiguration*(^)(void))configBlock
 {
     TDConfiguration *config = configBlock();
 

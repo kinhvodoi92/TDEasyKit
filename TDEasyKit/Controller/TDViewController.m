@@ -285,7 +285,7 @@
         [super viewWillAppear:animated];
         [self.navigationController setNavigationBarHidden:true];
 
-        if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        if (self.hidesBackButton == false && [self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
             self.navigationController.interactivePopGestureRecognizer.enabled = YES;
             self.navigationController.interactivePopGestureRecognizer.delegate = self;
         }
