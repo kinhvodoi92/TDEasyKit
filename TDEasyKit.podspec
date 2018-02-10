@@ -7,14 +7,13 @@
 #
 
 Pod::Spec.new do |s|
-  s.name         = "TDEasyKit"
-  s.version      = "1.0.0"
-  s.summary      = "The Kit build base views for iCheck"
-  s.homepage     = "https://github.com/kinhvodoi92/TDEasyKit"
-  s.license      = "MIT"
-  s.author             = { "Dang Trung Duc" => "dangtrungduc92@gmail.com" }
-  s.platform     = :ios, "8.0"
+s.name         = "TDEasyKit"
+s.version      = "1.0.0"
+s.summary      = "The Kit build base views for iCheck"
+s.homepage     = "https://github.com/kinhvodoi92/TDEasyKit"
+s.license      = "MIT"
+s.author             = { "Dang Trung Duc" => "dangtrungduc92@gmail.com" }
+s.platform     = :ios, "8.0"
 s.source       = { :git => "https://github.com/kinhvodoi92/TDEasyKit.git", :branch => "master", :tag => s.version }
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+s.source_files  = "TDEasyKit/**/*.{h,m}"
 end
