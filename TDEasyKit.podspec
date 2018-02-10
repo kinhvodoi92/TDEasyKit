@@ -11,9 +11,10 @@ s.name         = "TDEasyKit"
 s.version      = "1.0.0"
 s.summary      = "The Kit build base views for iCheck"
 s.homepage     = "https://github.com/kinhvodoi92/TDEasyKit"
-s.license      = "MIT"
-s.author             = { "Dang Trung Duc" => "dangtrungduc92@gmail.com" }
+s.license      = "MIT", :file => LISENCE
+s.author       = { "Dang Trung Duc" => "dangtrungduc92@gmail.com" }
 s.platform     = :ios, "8.0"
-s.source       = { :git => "https://github.com/kinhvodoi92/TDEasyKit.git", :branch => "master", :tag => s.version }
-s.source_files  = "TDEasyKit/**/*.m"
+s.source       = { :git => "https://github.com/kinhvodoi92/TDEasyKit.git", :tag => s.version }
+s.source_files  = 'TDEasyKit/TDEasyKit.m'
+s.ios.framework = 'UIKit'
 end
