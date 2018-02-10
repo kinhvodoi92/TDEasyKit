@@ -17,8 +17,9 @@
 
     [super layoutSubviews];
 
+    __weak typeof(self) weakself = self;
     if (self.layoutBlock) {
-        self.layoutBlock(self);
+        self.layoutBlock(weakself);
     }
 
     if (!CGRectEqualToRect(prevRect, self.frame) && self.superview) {
