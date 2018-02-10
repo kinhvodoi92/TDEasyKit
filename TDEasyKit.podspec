@@ -15,7 +15,7 @@ s.license      = { :type => 'MIT', :file => 'LICENSE' }
 s.author       = { "Dang Trung Duc" => "dangtrungduc92@gmail.com" }
 s.platform     = :ios, "8.0"
 s.source       = { :git => "https://github.com/kinhvodoi92/TDEasyKit.git", :tag => s.version }
-s.source_files  = 'TDEasyKit/**/*.*'
+s.source_files  = 'TDEasyKit/**/*.{h,m,mm}'
 s.prefix_header_file = 'TDEasyKit/TDEasyKit-Prefix.pch'
 s.ios.framework = 'UIKit'
 end
