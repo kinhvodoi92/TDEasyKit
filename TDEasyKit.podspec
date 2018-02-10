@@ -11,11 +11,12 @@ s.name         = "TDEasyKit"
 s.version      = "1.0.0"
 s.summary      = "The Kit build base views for iCheck"
 s.homepage     = "https://github.com/kinhvodoi92/TDEasyKit"
-s.license      = { :type => 'MIT', :file => 'LICENSE' }
+#s.license      = { :type => 'MIT', :file => 'LICENSE' }
 s.author       = { "Dang Trung Duc" => "dangtrungduc92@gmail.com" }
-s.platform     = :ios, "8.0"
-s.source       = { :git => "https://github.com/kinhvodoi92/TDEasyKit.git", :tag => s.version }
-s.source_files  = 'TDEasyKit/**/*.{h,m,mm}'
-s.prefix_header_file = 'TDEasyKit/TDEasyKit-Prefix.pch'
-s.ios.framework = 'UIKit'
+s.ios.deployment_target = "8.0"
+#s.source       = { :git => "https://github.com/kinhvodoi92/TDEasyKit.git", :tag => s.version }
+s.source       = { :tag => s.version }
+s.source_files  = "TDEasyKit/**/*.{h,m,mm}"
+s.prefix_header_file = "TDEasyKit/TDEasyKit-Prefix.pch"
+s.ios.framework = "UIKit"
 end
