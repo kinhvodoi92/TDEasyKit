@@ -15,5 +15,5 @@ s.license      = "MIT"
 s.author             = { "Dang Trung Duc" => "dangtrungduc92@gmail.com" }
 s.platform     = :ios, "8.0"
 s.source       = { :git => "https://github.com/kinhvodoi92/TDEasyKit.git", :branch => "master", :tag => s.version }
-s.source_files  = "TDEasyKit/**/*.{h,m}"
+s.source_files  = "TDEasyKit/*.{h,m}"
 end
