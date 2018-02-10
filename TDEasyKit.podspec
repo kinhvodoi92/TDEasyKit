@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "TDEasyKit"
   s.version      = "1.0.0"
-  s.summary      = ""
+  s.summary      = "The Kit build base views for iCheck"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
+  s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/kinhvodoi92/TDEasyKit.git", :commit => "751a154714359e09b5420c5eb7ec74384b7477cc" }
+s.source       = { :git => "https://github.com/kinhvodoi92/TDEasyKit.git", :commit => "751a154714359e09b5420c5eb7ec74384b7477cc", :tag => "1.0.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
